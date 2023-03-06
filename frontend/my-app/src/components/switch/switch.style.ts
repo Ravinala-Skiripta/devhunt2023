@@ -13,7 +13,7 @@ export const CheckBoxLabel = styled.label`
   width: 42px;
   height: 26px;
   border-radius: 15px;
-  background: #bebebe;
+  background: ${props => props.theme.colors.primary};
   cursor: pointer;
         &::after {
             content: "";
@@ -34,7 +34,7 @@ export const CheckBox = styled.input`
   width: 42px;
   height: 26px;
         &:checked + ${CheckBoxLabel} {
-            background-color: ${props => props.theme.themode.primary} ;
+            background-color: ${props => props.theme.colors.primary};
             &::after {
             content: "";
             display: block;

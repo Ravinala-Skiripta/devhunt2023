@@ -1,22 +1,25 @@
 import styled from 'styled-components';
-import { Box }  from "@mui/material";
-import {device} from "@/assets/display/screensize";
+import { Box } from '@mui/material';
+import { IButton } from './button';
+import { device } from '@/assets/display/screensize';
 
 
-export const BoxStyled = styled(Box)`
+export const BoxStyled = styled(Box)<IButton>`
     display: flex;
-    min-width: ${props => props.theme.size(5) * 12}px;
-    background-color: ${props => props.theme.colors.surfaceVariant};
-    border-radius: ${props => props.theme.size(2)}px;
-    border-color: ${props => props.theme.colors.outline};
-    border: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    width: 100%;
+    background-color: ${props => props.color != '' ? props.color : props.theme.colors.onTertiary};
 
-    & .MuiInputBase-root {
-        font-family: ${props => props.theme.typography.body.fontFamily};
-        color: ${props => props.theme.colors.OnSurfaceVariant};
 
-        &:hover {
-        }
+    
+    & .MuiButton-root {
+        color: ${props => props.color != '' ? props.color.onError : props.theme.colors.tertiary};
+        background-color: ${props => props.color != '' ? props.color.error : 'transparent'};
+        width: 100%;
+        border-radius: 15px;
 
         @media ${device.MobileS} {
             min-width: ${props => props.theme.size(2) * 6}px;
@@ -39,7 +42,7 @@ export const BoxStyled = styled(Box)`
         }
 
         @media ${device.Laptop} {
-            min-width: ${props => props.theme.size(7) * 5}px;
+            min-width: ${props => props.theme.size(7) * 6}px;
             font-size: ${props => props.theme.size(6) + 2}px;
         }
 
@@ -54,14 +57,4 @@ export const BoxStyled = styled(Box)`
             font-size: ${props => props.theme.size(9) + 2}px;
         }
     }
-    ;
-
-    & .MuiInputBase-root {
-        padding: 10px;
-    };
-
-    & .MuiInput-underline {
-        border-bottom: none;
-    }
-
 `

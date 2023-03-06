@@ -1,4 +1,6 @@
-import styled from 'styled-components';
+export interface IScreenSize {
+    size?: number
+}
 
 const size = {
     MobileS: '320px',

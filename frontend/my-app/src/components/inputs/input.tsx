@@ -3,7 +3,7 @@ import { BoxStyled } from "./input.style";
 import { InputBase } from "@mui/material";
 
 interface IInput {
-    id: string,
+    id: string  ,
     label: string,
     type: string,
     value: string,

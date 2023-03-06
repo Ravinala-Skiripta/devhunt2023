@@ -6,7 +6,7 @@ export interface ISpace {
     height: number;
 }
 
-const Space: React.FC<ISpace> = ({ size, height = 0 }) => {
+const Space: React.FC<ISpace> = ({ size, height }) => {
     return <StyledSpace size={size} height={height} />
 }
 

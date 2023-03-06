@@ -1,6 +1,6 @@
 import GlobalStyle from '@/core/theme/global'
 import { ThemeProvider } from 'styled-components'
-import theme from '@/core/theme/theme'
+import theme from '@/core/theme/light'
 import type { AppProps } from 'next/app'
 
 export default function App({ Component, pageProps }: AppProps) {
