@@ -1,3 +1,8 @@
-# devhunt2023
+# backend
 
-DevHunt 2ème édition organisé par l'ENI Fianarantsoa , année 2023
+before running, make
+npm install
+
+
+how to run: 
+npm start
