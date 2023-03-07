@@ -114,7 +114,7 @@ export const putData = async <T extends Record<string, any>>(
 
 export const deleteData = async <T>(
   url: string,
-  token: any
+  token: string
 ): Promise<ApiResponse<T>> => {
   return axiosProvider({
     method: "delete",
